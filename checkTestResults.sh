@@ -40,7 +40,7 @@ for DIR in $(ls $TESTDIR); do
     for SUBDIR in $(ls $TESTDIR/$DIR); do
         [[ $SUBDIR =~ ^[0-9]+$ ]] || continue
 
-        rm -rf $WORKDIR/tests/$TAG 2> /dev/null
+        rm -rf $WORKDIR/tests/$TAG/$SUBDIR 2> /dev/null
         mv $TESTDIR/$DIR/$SUBDIR $WORKDIR/tests/$TAG/
 
         stat $TESTDIR/$DIR/${SUBDIR}_OK.log > /dev/null 2>&1
