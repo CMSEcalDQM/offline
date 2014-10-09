@@ -7,7 +7,7 @@ if [ ! $MONITOR_ROOT ]; then
 fi
 
 PARENT=$(dirname $MONITOR_ROOT)
-while [ $PARENT != "MYDEV" ]; do
+while ! [[ $PARENT =~ MYDEV$ ]]; do
     PARENT=$(dirname $PARENT)
 done
 GUIDIR=$(dirname $PARENT)
