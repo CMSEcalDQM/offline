@@ -30,6 +30,8 @@ else
     mkdir -p $WORKDIR/tests/$TAG
 fi
 
+[ -d $WORKDIR/plots ] || mkdir -p $WORKDIR/plots
+
 TESTDIR=$CMSSW_BASE/src/DQMServices/Components/test
 
 RESULTS=
